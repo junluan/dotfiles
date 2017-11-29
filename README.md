@@ -1,6 +1,6 @@
 # dotfiles
-This is my personal configurations
 
+This is my personal configurations
 
 # Install VIM
 
