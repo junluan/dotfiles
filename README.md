@@ -9,3 +9,10 @@ Install Vundle: ```git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/
 Install Plugins: Launch vim and run ```:PluginInstall```
 
 To install from command line: ```vim +PluginInstall +qall```
+
+# Install YouCompleteMe
+
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+```
