@@ -1,20 +1,16 @@
 " Make Vim more useful
 set nocompatible
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin('~/.vim/bundle')
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Raimondi/delimitMate'
-Plugin 'google/vim-maktaba'
-Plugin 'google/vim-codefmt'
-Plugin 'google/vim-glaive'
-"Plugin 'Valloric/YouCompleteMe'
+Plug 'scrooloose/nerdtree'
+Plug 'Raimondi/delimitMate'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+"Plug 'Valloric/YouCompleteMe'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 " Enable syntax highlighting
 syntax on
@@ -36,9 +32,6 @@ set mouse=a
 set tabstop=2
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
-" No backup and swap file
-set nobackup
-set noswapfile
 
 map <C-i> :FormatCode<CR>
 
@@ -55,4 +48,3 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Open NERDTree automatically when vim starts up on opening a directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-
