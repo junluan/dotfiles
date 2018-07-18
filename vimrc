@@ -15,7 +15,7 @@ call plug#end()
 " Enable syntax highlighting
 syntax on
 " Highlight current line
-set cursorline
+" set cursorline
 " Enable line numbers
 set number
 " Highlight searches
